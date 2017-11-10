@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/>
     <script src="/jquery/src/jquery.js"></script>
     <script src="/bootstrap/dist/js/bootstrap.js"></script>
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  <div class="container">
-    <!-- Split button -->
-    <div class="btn-group">
-      <button type="button" class="btn btn-danger">Action</button>
-      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="caret"></span>
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">Separated link</a></li>
-      </ul>
-    </div>
-  </div>
-  </body>
+</head>
+<body>
+<video autoplay="autoplay" loop poster="/images/index_begin_bg.jpg" id="bg_video_id">
+    <source src="/video/fit_index_bg.webm" type="video/webm">
+    <source src="/video/fit_index_bg.mp4" type="video/mp4">
+    您的浏览器不支持 HTML5 video 标签。
+</video>
+<%- include component/index_nav_top.ejs %>
+
+
+<div id="index_banner">
+
+</div>
+<div id="index_bottom">
+</div>
+
+</div>
+</body>
 </html>

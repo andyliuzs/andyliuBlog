@@ -1,8 +1,29 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@charset "utf-8";
+/* CSS Document */
+body{
+  margin:0; padding:0;
+
+}
+video#bg_video_id {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: url(../images/index_begin_bg.jpg) no-repeat;
+  background-size: cover;
 }
 
-a {
-  color: #00B7FF;
+#index_nav{
+  background-color: rgba(00, 00, 00, 0.0);
+  border-color: rgba(00, 66, 00, 0.0);
+}
+#index_bottom{
+  background-color: rgba(66 ,66, 66, 0.16);
+  border-color: rgba(66, 66, 66, 0.16);
+  position: fixed;
+  bottom:0;
+  right: 0;
+  left: 0;
+  height:35px;
 }
