@@ -25,5 +25,12 @@ video#bg_video_id {
   bottom:0;
   right: 0;
   left: 0;
-  height:35px;
+  height:45px;
+}
+
+.vertical-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
