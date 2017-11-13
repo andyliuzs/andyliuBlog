@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/>
+
+    <link rel="stylesheet" href="/stylesheets/animations_action.css"/>
+    <link rel="stylesheet" href="/stylesheets/animations_init_view.css"/>
+
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/javascripts/welcome.js"></script>
+</head>
+<body>
+
+<video autoplay="autoplay" loop poster="/images/index_begin_bg.jpg" id="bg_video_id">
+    <source src="/video/fit_index_bg.webm" type="video/webm">
+    <source src="/video/fit_index_bg.mp4" type="video/mp4">
+    您的浏览器不支持 HTML5 video 标签。
+</video>
+<%- include component/index_nav_top.ejs %>
+
+<div id="index_banner" class="container-fluid screen-vertical-center">
+    <img src="/images/index_banner_text.png" class="img-responsive"/>
+
+    <div id="pt-main" class="pt-perspective">
+        <div class="pt-page">
+            <button type="button" id="btn_login"
+                    class="btn  center-block btn-lg btn-block transparent-btn-success margin-top45">
+                登&nbsp;&nbsp;&nbsp;&nbsp;录
+            </button>
+            <button type="button" id="btn_reg"
+                    class="btn  center-block btn-lg btn-block transparent-btn-danger margin-top25">
+                注&nbsp;&nbsp;&nbsp;&nbsp;册
+            </button>
+        </div>
+        <div class="pt-page">
+            <div class="circle_redius_black_bg text-color-while ">
+                <h2 class="text-center padding-top20">登录</h2>
+                <form class="form-horizontal ">
+                    <div class="form-group">
+                        <label for="loginusername" class="col-sm-offset-1 col-sm-2 control-label">用户名</label>
+                        <div class="col-sm-8">
+                            <input type="input" class="form-control" id="loginusername" placeholder="用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginpssword"
+                               class="col-sm-offset-1 col-sm-2 control-label">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="loginpssword" placeholder="密码">
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <button type="submit" class="btn btn-success btn-block ">登录</button>
+                        </div>
+                    </div>
+                    <div class="form-group padding-bottom35">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <button type="button" id="btn_login_back" class="btn btn-primary btn-block center-block">返回
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="pt-page">
+            <div class="circle_redius_black_bg text-color-while ">
+                <h2 class="text-center padding-top20">注册</h2>
+                <form class="form-horizontal ">
+                    <div class="form-group">
+                        <label for="regusername" class=" col-sm-3 control-label">用户名</label>
+                        <div class="col-sm-8">
+                            <input type="input" class="form-control" id="regusername" placeholder="用户名">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regphone" class=" col-sm-3 control-label">手机号</label>
+                        <div class="col-sm-8">
+                            <input type="input" class="form-control" id="regphone" placeholder="手机号">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regemail" class=" col-sm-3 control-label">邮&nbsp;&nbsp;&nbsp;&nbsp;箱</label>
+                        <div class="col-sm-8">
+                            <input type="input" class="form-control" id="regemail" placeholder="邮箱">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regpassword1" class=" col-sm-3 control-label">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="regpassword1" placeholder="密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regpassword2" class=" col-sm-3 control-label">确认密码</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="regpassword2" placeholder="确认密码">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <button type="submit" class="btn btn-success btn-block ">注册</button>
+                        </div>
+                    </div>
+                    <div class="form-group padding-bottom35">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <button type="button" id="btn_reg_back" class="btn btn-primary btn-block center-block">返回
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<div id="index_bottom" class="center-block">
+    <i class="padding-top10"
+       style="text-align: center; display: block; font-style: normal;  margin:auto; top:0; left:0; bottom:0; right:0;">
+        <span style="color:#A9A9A9;">
+            <span style="font-size:12px;">
+                Copyright&nbsp;©&nbsp;2015-2017&nbsp;xxxx.com All Rights Reserved Lose Weight&nbsp;
+            </span>
+        </span>
+        <span
+                style="font-size:12px;">
+            <a href="http://www.miibeian.gov.cn/" target="_blank">
+                <span style="color:#A9A9A9;">
+                    京ICP备xxxxxxxxx号-x
+                </span>
+            </a>
+        </span>
+        <span style="color:#A9A9A9;">
+            <span style="font-size:12px;">
+                &nbsp;京公网安备xxxxxxxxx号
+            </span>
+        </span>
+    </i>
+</div>
+<script src="/javascripts/modernizr.custom.js"></script>
+<script src="/javascripts/pagetransitions.js"></script>
+</body>
+</html>
