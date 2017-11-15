@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var session = require('express-session');
 var route = require('./routes/index');
 var app = express();
 //连接数据库
@@ -23,6 +23,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+app.user(session({
+    secret: 'recommand 128 bytes random string', // 建议使用 128 个字符的随机字符串
+    cookie: {maxAge: 60 * 1000 * 5}
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/', route);

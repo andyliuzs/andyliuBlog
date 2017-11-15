@@ -37,7 +37,7 @@ exports.doLogin = function (req, res) {
                             msg: '密码错误！'
                         });
                     } else {
-                        req.session.user = user;
+                        // req.session.user = user;
                         console.log("登录成功 by email！")
                         res.send({
                             result: true,
@@ -59,7 +59,7 @@ exports.doLogin = function (req, res) {
                 });
             } else {
                 console.log("登录成功 by username！")
-                req.session.user = user;
+                // req.session.user = user;
                 res.send({
                     result: true,
                     msg: '登录成功！'
