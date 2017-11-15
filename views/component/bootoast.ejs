@@ -1,0 +1,49 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/components/bootoast.css">
+<script src="/javascripts/components/bootoast.js"></script>
+<script type="text/javascript">
+    /***
+     *type( info success warning danger)
+     *
+     * position 默认'bottom-center'    Toast消息显示的位置。可以是top，left-top，right-top，bottom，left-bottom，right-bottom。
+     *
+     * icon Bootstrap 3 glyphicons名称。
+     *
+     * timeout Toast自动隐藏的时间。设置为false或0表示不会自动隐藏。
+     *
+     *  animationDuration Toast隐藏动画的持续时间，单位毫秒。
+     *  dismissable 是否在Toast上显示×按钮。
+     *
+     */
+    var Toast = function (msg, type, position, icon, timeout, animationDuration, dismissable) {
+        try {
+            if ($('.bootoast-container').children().length >= 1) {
+                $('.bootoast-container').empty();
+            }
+        } catch (err) {
+            console.log(err.message)
+        }
+        bootoast({
+            message: msg,
+            type: type,
+            position: position,
+            icon: icon,
+            timeout: timeout,
+            animationDuration: animationDuration,
+            dismissable: dismissable
+        });
+    }
+
+
+    var ToastInfo = function (msg) {
+        Toast(msg, 'info', 'top-center', 'glyphicon glyphicon-tree-deciduous', true, 300, true)
+    }
+    var ToastSuccess = function (msg) {
+        Toast(msg, 'success', 'top-center', 'glyphicon glyphicon-grain', true, 300, true)
+    }
+    var ToastWarning = function (msg) {
+        Toast(msg, 'warning', 'top-center', 'glyphicon glyphicon-alert', true, 300, true)
+    }
+    var ToastDanger = function (msg) {
+        Toast(msg, 'danger', 'top-center', 'glyphicon glyphicon-alert', true, 300, true)
+    }
+</script>
